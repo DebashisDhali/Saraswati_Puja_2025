@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saraswati Puja 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.min.js"></script>
+  </head>
+  <body class="bg-yellow-50 font-sans">
+    <!-- Header Section -->
+    <header class="bg-yellow-300 text-center py-10">
+      <h1 class="text-4xl font-bold text-orange-700">
+        Welcome to Saraswati Puja 2025
+      </h1>
+      <p class="mt-4 text-lg text-orange-600">
+        Let’s celebrate knowledge and wisdom together!
+      </p>
+    </header>
+
+    <!-- Countdown Section -->
+    <section class="text-center py-10">
+      <h2 class="text-2xl font-semibold text-gray-700">
+        Countdown to the Event
+      </h2>
+      <div id="timer" class="mt-4 text-3xl font-bold text-orange-500"></div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="py-10 px-5 md:px-20">
+      <h2 class="text-2xl font-semibold text-gray-700 text-center">
+        Event Schedule
+      </h2>
+      <ul id="schedule" class="mt-6 space-y-4 text-lg text-gray-600">
+        <li>
+          <strong class="text-orange-600">Puja Timing:</strong> 9:00 AM to 12:00
+          PM
+        </li>
+        <li><strong class="text-orange-600">Venue:</strong> Department of Computer Science & Engineering,Jahangirnagar University,Savar,Dhaka-1342</li>
+        <li>
+          <strong class="text-orange-600">Cultural Programs:</strong> 4:00 PM to
+          8:00 PM
+        </li>
+      </ul>
+    </section>
+
+    <!-- Interactive Poll Section -->
+    <section class="py-10 px-5 md:px-20 bg-white">
+      <h2 class="text-2xl font-semibold text-gray-700 text-center">
+        Vote for Your Favorite Cultural Program
+      </h2>
+      <form
+        id="pollForm"
+        class="mt-6 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg"
+      >
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium"
+            >Select Your Favorite:</label
+          >
+          <div class="mt-2 space-y-2">
+            <label class="flex items-center">
+              <input
+                type="radio"
+                name="vote"
+                value="Dance Performance"
+                class="mr-2"
+              />
+              Dance Performance
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="vote" value="Drama" class="mr-2" />
+              Drama
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="vote" value="Singing" class="mr-2" />
+              Singing
+            </label>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="voteButton"
+          class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition"
+        >
+          Submit Vote
+        </button>
+      </form>
+      <canvas
+        id="pollChart"
+        class="mt-10 mx-auto"
+        width="400"
+        height="200"
+      ></canvas>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-10 px-5 md:px-20 bg-white">
+      <h2 class="text-2xl font-semibold text-gray-700 text-center">
+        Photo Gallery
+      </h2>
+      <h2>2025</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+        <img
+          src="1.jpg"
+          alt="Saraswati Puja Image 1"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src="2.jpg"
+          alt="Saraswati Puja Image 2"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src="3.jpg"
+          alt="Saraswati Puja Image 3"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+      <h2>2024</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+        <img
+          src="1.jpg"
+          alt="Saraswati Puja Image 1"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src="2.jpg"
+          alt="Saraswati Puja Image 2"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src="3.jpg"
+          alt="Saraswati Puja Image 3"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+      <h2>2023</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+        <img
+          src="1.jpg"
+          alt="Saraswati Puja Image 1"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src="2.jpg"
+          alt="Saraswati Puja Image 2"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src="3.jpg"
+          alt="Saraswati Puja Image 3"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+    </section>
+
+    <!-- RSVP Form Section -->
+    <section class="py-10 px-5 md:px-20">
+      <h2 class="text-2xl font-semibold text-gray-700 text-center">
+        Confirm Your Attendance
+      </h2>
+      <form class="mt-6 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 font-medium"
+            >Your Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 font-medium"
+            >Your Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+      <p>&copy; 2025 Saraswati Puja Committee | All Rights Reserved</p>
+    </footer>
+    <script>
+      // Add GSAP animation to the event schedule section
+      const scheduleItems = document.querySelectorAll("#schedule li");
+      gsap.from(scheduleItems, {
+        opacity: 0,
+        y: 20,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: "#schedule",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      // Add hover effect for interaction
+      scheduleItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          gsap.to(item, {
+            scale: 1.1,
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        });
+        item.addEventListener("mouseleave", () => {
+          gsap.to(item, {
+            scale: 1,
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        });
+      });
+    </script>
+
+    <script>
+      // Countdown Timer
+      const countdown = () => {
+        const eventDate = new Date("February 3, 2025 09:00:00").getTime();
+        const now = new Date().getTime();
+        const gap = eventDate - now;
+
+        const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+
+        document.getElementById(
+          "timer"
+        ).innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+      };
+      setInterval(countdown, 1000);
+
+      // Poll Interaction
+      const pollData = {
+        labels: ["Dance Performance", "Drama", "Singing"],
+        datasets: [
+          {
+            label: "Votes",
+            data: [0, 0, 0],
+            backgroundColor: ["#FDBA74", "#FBBF24", "#F59E0B"],
+            borderColor: ["#FB923C", "#F59E0B", "#D97706"],
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      const pollChart = new Chart(document.getElementById("pollChart"), {
+        type: "bar",
+        data: pollData,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+          },
+        },
+      });
+
+      document.getElementById("voteButton").addEventListener("click", () => {
+        const vote = document.querySelector('input[name="vote"]:checked');
+        if (vote) {
+          const index = pollData.labels.indexOf(vote.value);
+          pollData.datasets[0].data[index] += 1;
+          pollChart.update();
+          alert("Thank you for voting!");
+        } else {
+          alert("Please select an option before submitting your vote.");
+        }
+      });
+    </script>
+  </body>
+</html>
