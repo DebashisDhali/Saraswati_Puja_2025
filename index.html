@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        scroll-margin: 10px;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saraswati Puja 2025</title>
@@ -8,6 +16,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.min.js"></script>
   </head>
   <body class="bg-yellow-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+      >
+        <div class="flex items-center">
+          <a href="#" class="text-orange-600 text-2xl font-bold">
+            Saraswati Puja 2025
+          </a>
+        </div>
+        <div>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#schedule"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Schedule</a
+              >
+            </li>
+            <li>
+              <a
+                href="#committee"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Committee</a
+              >
+            </li>
+            <li>
+              <a
+                href="#banner&card"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Banner & Card</a
+              >
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#rsvp"
+                class="text-gray-700 hover:text-orange-500 transition"
+                >Participate
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- Header Section -->
     <header class="bg-yellow-300 text-center py-10">
       <h1 class="text-4xl font-bold text-orange-700">
@@ -27,16 +91,20 @@
     </section>
 
     <!-- Event Details Section -->
-    <section class="py-10 px-5 md:px-20">
+    <section id="schedule" class="py-10 px-5 md:px-20">
       <h2 class="text-2xl font-semibold text-gray-700 text-center">
         Event Schedule
       </h2>
       <ul id="schedule" class="mt-6 space-y-4 text-lg text-gray-600">
         <li>
-          <strong class="text-orange-600">Puja Timing:</strong> 9:00 AM to 12:00
-          PM
+          <strong class="text-orange-600">Puja Timing:</strong> Panchami Tithi
+          Begins - 09:44 AM on Feb 02, 2025 Panchami Tithi Ends - 07:22 AM on
+          Feb 03, 2025
         </li>
-        <li><strong class="text-orange-600">Venue:</strong> Department of Computer Science & Engineering,Jahangirnagar University,Savar,Dhaka-1342</li>
+        <li>
+          <strong class="text-orange-600">Venue:</strong> Department of Computer
+          Science & Engineering,Jahangirnagar University,Savar,Dhaka-1342
+        </li>
         <li>
           <strong class="text-orange-600">Cultural Programs:</strong> 4:00 PM to
           8:00 PM
@@ -44,57 +112,101 @@
       </ul>
     </section>
 
-    <!-- Interactive Poll Section -->
-    <section class="py-10 px-5 md:px-20 bg-white">
-      <h2 class="text-2xl font-semibold text-gray-700 text-center">
-        Vote for Your Favorite Cultural Program
+    <!-- Saraswati Puja Organizing Committee Section -->
+    <section id="committee" class="py-10 px-5 md:px-20 bg-pink-50">
+      <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">
+        Shri Shri Saraswati Puja Celebration Committee 2025
       </h2>
-      <form
-        id="pollForm"
-        class="mt-6 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg"
-      >
-        <div class="mb-4">
-          <label class="block text-gray-700 font-medium"
-            >Select Your Favorite:</label
-          >
-          <div class="mt-2 space-y-2">
-            <label class="flex items-center">
-              <input
-                type="radio"
-                name="vote"
-                value="Dance Performance"
-                class="mr-2"
-              />
-              Dance Performance
-            </label>
-            <label class="flex items-center">
-              <input type="radio" name="vote" value="Drama" class="mr-2" />
-              Drama
-            </label>
-            <label class="flex items-center">
-              <input type="radio" name="vote" value="Singing" class="mr-2" />
-              Singing
-            </label>
-          </div>
-        </div>
-        <button
-          type="button"
-          id="voteButton"
-          class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition"
-        >
-          Submit Vote
-        </button>
-      </form>
-      <canvas
-        id="pollChart"
-        class="mt-10 mx-auto"
-        width="400"
-        height="200"
-      ></canvas>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold text-orange-600 mb-4 text-center">
+          Advisory Committee
+        </h3>
+        <ul class="text-lg text-gray-600 space-y-2">
+          <li>Dr. Jugal Krishna Das</li>
+          <li>Dr. Sanjit Kumar Saha</li>
+          <li>Swarnali Bosak</li>
+          <li>Anup Mojumder</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-orange-600 mt-6 mb-4 text-center">
+          Executive Committee
+        </h3>
+        <ul class="text-lg text-gray-600 space-y-2">
+          <li><strong>President:</strong> Debashis Dhali</li>
+          <li><strong>Vice Presidents:</strong> Anup Poddar, Pratik Das</li>
+          <li><strong>General Secretary:</strong> Sagar Parakayastha</li>
+          <li>
+            <strong>Joint General Secretary:</strong> Shrabasti Karmakar Shoibo
+          </li>
+          <li>
+            <strong>Treasurer:</strong> Nirab Mondal, Amlan Dutta, Orthita
+            Biswas
+          </li>
+          <li>
+            <strong>Organizing Secretaries:</strong> Kanak ray Sabuj, Apita Roy,
+            Jyoti Pal
+          </li>
+          <li>
+            <strong>Office Secretaries:</strong> Shimul Bardhan, Dipu Mojumder,
+            Joyshree Saha
+          </li>
+          <li>
+            <strong>Publicity Secretaries:</strong> Aditya Chandra Debnath,
+            Dipto Kumar Das, Soumitra Saha, Anindya Saha
+          </li>
+          <li>
+            <strong>Hospitality Secretaries:</strong> Nandini Howlader, Beauty
+            Pal, Sitarani Ray, Sukanya Dutta Pushpa
+          </li>
+          <li>
+            <strong>Executive Members:</strong> Chanchal Talukdar, Prabhat Das,
+            Shanto Barman, Pranto Mondal, Ontu Debnath
+          </li>
+        </ul>
+      </div>
     </section>
+    <!-- Banner and Invitation Card Section -->
+    <section id="banner&card" class="py-10 px-5 md:px-20 bg-magenta">
+      <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">
+        Banner and Invitation Card
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Banner -->
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-orange-600 mb-4">Event Banner</h3>
+          <img
+            src="banner.jpg"
+            alt="Saraswati Puja 2025 Banner"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 mx-auto"
+            style="max-width: 400px; height: 500px;" 
+          />
+          <p class="text-gray-600 mt-4">
+            Our beautifully designed banner capturing the spirit of Saraswati Puja.
+          </p>
+        </div>
+    
+        <!-- Invitation Card -->
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-orange-600 mb-4">
+            Invitation Card
+          </h3>
+          <img
+            src="card.jpg"
+            alt="Saraswati Puja 2025 Invitation Card"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 mx-auto"
+            style="max-width: 400px; height: auto;" 
+          />
+          <p class="text-gray-600 mt-4">
+            You are cordially invited to join the celebrations with this elegant
+            invitation card.
+          </p>
+        </div>
+      </div>
+    </section>
+    
 
     <!-- Photo Gallery Section -->
-    <section class="py-10 px-5 md:px-20 bg-white">
+    <section id="gallery" class="py-10 px-5 md:px-20 bg-white">
       <h2 class="text-2xl font-semibold text-gray-700 text-center">
         Photo Gallery
       </h2>
@@ -155,42 +267,72 @@
     </section>
 
     <!-- RSVP Form Section -->
-    <section class="py-10 px-5 md:px-20">
-      <h2 class="text-2xl font-semibold text-gray-700 text-center">
-        Confirm Your Attendance
-      </h2>
-      <form class="mt-6 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <div class="mb-4">
-          <label for="name" class="block text-gray-700 font-medium"
-            >Your Name</label
-          >
-          <input
-            type="text"
-            id="name"
-            class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
-            placeholder="Enter your name"
-            required
-          />
+    <section id="rsvp" class="py-10 px-5 md:px-15">
+      <div
+        class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+      >
+        <!-- Left: Attendance Form -->
+        <div class="flex flex-col justify-center items-center">
+          <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">
+            Confirm Your Attendance
+          </h2>
+          <form class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+            <div class="mb-4">
+              <label for="name" class="block text-gray-700 font-medium"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 font-medium"
+                >Your Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="mobile" class="block text-gray-700 font-medium"
+                >Your Mobile Number</label
+              >
+              <input
+                type="number"
+                id="mobile"
+                class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
+                placeholder="Enter your mobile number"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition"
+            >
+              Submit
+            </button>
+          </form>
         </div>
-        <div class="mb-4">
-          <label for="email" class="block text-gray-700 font-medium"
-            >Your Email</label
-          >
-          <input
-            type="email"
-            id="email"
-            class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
-            placeholder="Enter your email"
-            required
-          />
+
+        <!-- Right: QR Code -->
+        <div class="flex flex-col justify-center items-center">
+          <h2 class="text-2xl font-semibold text-gray-700 mb-6">
+            Let's Join With Us
+          </h2>
+          <img src="QR.jpg" alt="QR Code" class="w-48 h-48" />
+          <p class="text-gray-600 mt-4 text-center">
+            Scan the QR code to get connected with us.
+          </p>
         </div>
-        <button
-          type="submit"
-          class="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition"
-        >
-          Submit
-        </button>
-      </form>
+      </div>
     </section>
 
     <!-- Footer -->
