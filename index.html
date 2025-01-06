@@ -26,7 +26,7 @@
             Saraswati Puja 2025
           </a>
         </div>
-        <div>
+        <div class="hidden md:block">
           <ul class="flex space-x-6">
             <li>
               <a href="#" class="text-gray-700 hover:text-orange-500 transition"
@@ -44,8 +44,8 @@
               <a
                 href="#rsvp"
                 class="text-gray-700 hover:text-orange-500 transition"
-                >Contribute
-              </a>
+                >Contribute</a
+              >
             </li>
             <li>
               <a
@@ -70,8 +70,78 @@
             </li>
           </ul>
         </div>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 hover:text-orange-600">
+            ☰
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden bg-pink-200 md:hidden">
+        <ul class="flex flex-col space-y-4 px-4 py-6">
+          <li>
+            <a
+              href="#"
+              class="menu-item text-gray-700 hover:text-orange-500 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#schedule"
+              class="menu-item text-gray-700 hover:text-orange-500 transition"
+              >Schedule</a
+            >
+          </li>
+          <li>
+            <a
+              href="#rsvp"
+              class="menu-item text-gray-700 hover:text-orange-500 transition"
+              >Contribute</a
+            >
+          </li>
+          <li>
+            <a
+              href="#committee"
+              class="menu-item text-gray-700 hover:text-orange-500 transition"
+              >Committee</a
+            >
+          </li>
+          <li>
+            <a
+              href="#banner&card"
+              class="menu-item text-gray-700 hover:text-orange-500 transition"
+              >Banner & Card</a
+            >
+          </li>
+          <li>
+            <a
+              href="#gallery"
+              class="menu-item text-gray-700 hover:text-orange-500 transition"
+              >Gallery</a
+            >
+          </li>
+        </ul>
       </div>
     </nav>
+
+    <!-- Script for toggling mobile menu -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuItems = document.querySelectorAll(".menu-item");
+
+      // Toggle menu visibility on button click
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Hide menu when a menu item is clicked
+      menuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
     <!-- Header Section -->
     <header class="bg-yellow-300 text-center py-10">
       <h1 class="text-4xl font-bold text-orange-700">
