@@ -77,6 +77,14 @@
                 গ্যালারি
               </a>
             </li>
+            <li>
+              <a
+                href="#contact"
+                class="menu-item text-gray-700 hover:text-orange-500 transition"
+              >
+                যোগাযোগ
+              </a>
+            </li>
           </ul>
         </div>
         <div class="md:hidden">
@@ -133,6 +141,14 @@
               class="menu-item text-gray-700 hover:text-orange-500 transition"
             >
               গ্যালারি
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="menu-item text-gray-700 hover:text-orange-500 transition"
+            >
+              যোগাযোগ
             </a>
           </li>
         </ul>
@@ -212,27 +228,40 @@
       <div id="timer" class="mt-4 text-3xl font-bold text-orange-500"></div>
     </section>
 
-    <!-- ইভেন্ট বিবরণ বিভাগ -->
-    <section id="schedule" class="py-10 px-5 md:px-20">
-      <h2 class="text-2xl font-semibold text-gray-700 text-center">
-        ইভেন্ট সময়সূচি
-      </h2>
-      <ul id="schedule" class="mt-6 space-y-4 text-lg text-gray-600">
+  <!-- ইভেন্ট সময়সূচি বিভাগ -->
+<section id="schedule" class="py-10 px-5 md:px-20">
+  <h2 class="text-2xl font-semibold text-gray-700 text-center">
+    ইভেন্ট সময়সূচি
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mt-6 text-lg text-gray-600 justify-center">
+    <!-- Left Column -->
+    <div class="flex justify-center">
+      <ul class="space-y-4">
         <li>
-          <strong class="text-orange-600">পূজার সময়সূচি:</strong> পঞ্চমী তিথি
-          শুরু - সকাল ০৯:৪৪, ০২ ফেব্রুয়ারি, ২০২৫ | পঞ্চমী তিথি শেষ - সকাল
-          ০৭:২২, ০৩ ফেব্রুয়ারি, ২০২৫
-        </li>
-        <li>
-          <strong class="text-orange-600">স্থান:</strong> কম্পিউটার বিজ্ঞান ও
-          প্রকৌশল বিভাগ, জাহাঙ্গীরনগর বিশ্ববিদ্যালয়, সাভার, ঢাকা-১৩৪২
-        </li>
-        <li>
-          <strong class="text-orange-600">সাংস্কৃতিক অনুষ্ঠান:</strong> বিকাল
-          ৪:০০ থেকে রাত ৮:০০ পর্যন্ত
+          <strong class="text-orange-600">স্থান:</strong> <br />
+          কম্পিউটার বিজ্ঞান ও প্রকৌশল বিভাগ, <br />
+          জাহাঙ্গীরনগর বিশ্ববিদ্যালয়, সাভার, ঢাকা-১৩৪২
         </li>
       </ul>
-    </section>
+    </div>
+    <!-- Right Column -->
+    <div class="flex justify-center">
+      <ul class="space-y-4">
+        <li>
+          <strong class="text-orange-600">সময়সূচি:</strong>
+          <ul class="ml-5 list-disc">
+            <li>সকাল ৭:৩০ - প্রতিমা স্থাপন</li>
+            <li>সকাল ৮:৩০ - বাণী অর্চনা</li>
+            <li>সকাল ৯:০০ - পুষ্পাঞ্জলি</li>
+            <li>সকাল ১১:০০ - প্রসাদ বিতরণ</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- সরস্বতী পূজা আয়োজন কমিটি বিভাগ -->
     <section id="committee" class="py-10 px-5 md:px-20 bg-pink-50">
@@ -295,8 +324,9 @@
         <div class="text-center">
           <h3 class="text-xl font-bold text-orange-600 mb-4">ইভেন্ট ব্যানার</h3>
           <img
-            src="banner.jpg"
-            alt="সরস্বতী পূজা ২০২৫ ব্যানার"
+
+            src=""
+            alt="সরস্বতী পূজা ২০২৫ ব্যানার এর কাজ চলমান"
             class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 mx-auto"
             style="max-width: 400px; height: 500px"
           />
@@ -310,7 +340,13 @@
         <div class="text-center">
           <h3 class="text-xl font-bold text-orange-600 mb-4">আমন্ত্রণপত্র</h3>
           <img
-            src="card.jpg"
+            src="card_front.jpg"
+            alt="সরস্বতী পূজা ২০২৫ আমন্ত্রণপত্র"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 mx-auto"
+            style="max-width: 350px; height: auto"
+          />
+          <img
+            src="card_back.jpg"
             alt="সরস্বতী পূজা ২০২৫ আমন্ত্রণপত্র"
             class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 mx-auto"
             style="max-width: 350px; height: auto"
@@ -329,7 +365,55 @@
         ফটো গ্যালারি
       </h2>
       <h2>২০২৫</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-4 mt-6">
+        <img
+          src="1.jpg"
+          alt="সরস্বতী পূজা চিত্র ১"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src="2.jpg"
+          alt="সরস্বতী পূজা চিত্র ২"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+          src="1.jpg"
+          alt="সরস্বতী পূজা চিত্র ৩"
+          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+        <img
+        src="1.jpg"
+        alt="সরস্বতী পূজা চিত্র ১"
+        class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      />
+      <img
+        src="2.jpg"
+        alt="সরস্বতী পূজা চিত্র ২"
+        class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      />
+      <img
+        src="1.jpg"
+        alt="সরস্বতী পূজা চিত্র ৩"
+        class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+      />
+      <img
+      src="1.jpg"
+      alt="সরস্বতী পূজা চিত্র ১"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+    />
+    <img
+      src="2.jpg"
+      alt="সরস্বতী পূজা চিত্র ২"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+    />
+    <img
+      src="1.jpg"
+      alt="সরস্বতী পূজা চিত্র ৩"
+      class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+    />
+      </div>
+      <br><h2>২০২৪</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-4 mt-6">
         <img
           src="1.jpg"
           alt="সরস্বতী পূজা চিত্র ১"
@@ -346,42 +430,7 @@
           class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
         />
       </div>
-      <h2>২০২৪</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-        <img
-          src="1.jpg"
-          alt="সরস্বতী পূজা চিত্র ১"
-          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="2.jpg"
-          alt="সরস্বতী পূজা চিত্র ২"
-          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="1.jpg"
-          alt="সরস্বতী পূজা চিত্র ৩"
-          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-      <h2>২০২৩</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-        <img
-          src="1.jpg"
-          alt="সরস্বতী পূজা চিত্র ১"
-          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="2.jpg"
-          alt="সরস্বতী পূজা চিত্র ২"
-          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="1.jpg"
-          alt="সরস্বতী পূজা চিত্র ৩"
-          class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-      </div>
+      
     </section>
 
     <!-- RSVP Form Section -->
@@ -550,11 +599,32 @@
         </style>
       </div>
     </section>
+   <!-- যোগাযোগ বিভাগ -->
+<section id="contact" class="py-10 px-5 md:px-20 bg-gray-50">
+  <h2 class="text-2xl font-semibold text-gray-700 text-center">যোগাযোগ</h2>
+  <div class="mt-6 text-lg text-gray-600 text-center space-y-4">
+    <p>
+      <strong class="text-orange-600">মোবাইল নম্বর:</strong> <br />
+      ০১৮৫৭৪৪৫৬৯৩ : দেবাশীষ ঢালী (সিএসই-৫০) <br />
+      ০১৭৭৭৮৯৭৬৫৪ : সাগর পুরকায়স্থ (সিএসই-৫০) <br />
+      ০১৮৩৩৫৬১৬১০ : নীরব মণ্ডল (সিএসই-৫১)
+    </p>
+    <p>
+      <strong class="text-orange-600">ইমেইল ঠিকানা:</strong> <br />
+      debashisdhali104035@gmail.com <br />
+      sagorpka243@gmail.com <br />
+    </p>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6">
-      <p>&copy; ২০২৫ সরস্বতী পূজা কমিটি | সর্বস্বত্ব সংরক্ষিত</p>
+      <p>
+        &copy; ২০২৫ সরস্বতী পূজা কমিটি | কম্পিউটার বিজ্ঞান ও প্রকৌশল বিভাগ, জাহাঙ্গীরনগর বিশ্ববিদ্যালয় | সর্বস্বত্ব সংরক্ষিত
+      </p>
     </footer>
+    
 
     <script>
       // Add GSAP animation to the event schedule section
