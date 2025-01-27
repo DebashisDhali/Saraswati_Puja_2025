@@ -14,7 +14,7 @@
         height: 150px; /* Set desired height */
         object-fit: cover; /* Ensures the image fits the frame without distortion */
       }
-      #menu-btn{
+      #menu-btn {
         font-size: 25px;
       }
     </style>
@@ -249,10 +249,21 @@
 
         <!-- কাউন্টডাউন বিভাগ -->
         <section class="text-center py-10">
-          <h2 class="text-2xl font-semibold text-gray-700">
-            ইভেন্টের কাউন্টডাউন
-          </h2>
-          <div id="timer" class="mt-4 text-3xl font-bold text-orange-500"></div>
+          <div id="countdown-section">
+            <h2 class="text-2xl font-semibold text-gray-700">
+              ইভেন্টের কাউন্টডাউন
+            </h2>
+            <div
+              id="timer"
+              class="mt-4 text-3xl font-bold text-orange-500"
+            ></div>
+          </div>
+          <div
+            id="live-section"
+            class="hidden flex flex-col items-center justify-center text-center"
+          >
+            <!-- Dynamic content will appear here -->
+          </div>
         </section>
 
         <!-- ইভেন্ট সময়সূচি বিভাগ -->
@@ -743,7 +754,7 @@
     <script>
       // Function to update the timer
       function updateTimer() {
-        const eventDate = new Date("2025-02-03T07:30:00"); // Set your event date and time
+        const eventDate = new Date("2025-02-03T09:00:00"); // Set your event date and time
         const now = new Date();
         const timeDifference = eventDate - now;
 
@@ -762,18 +773,75 @@
             num.toString().replace(/\d/g, (d) => "০১২৩৪৫৬৭৮৯"[d]);
 
           document.getElementById("timer").innerHTML = `
-        ${convertToBengali(days)} দিন, 
-        ${convertToBengali(hours)} ঘণ্টা, 
-        ${convertToBengali(minutes)} মিনিট, 
-        ${convertToBengali(seconds)} সেকেন্ড
-      `;
+  ${convertToBengali(days)} দিন,
+  ${convertToBengali(hours)} ঘণ্টা,
+  ${convertToBengali(minutes)} মিনিট,
+  ${convertToBengali(seconds)} সেকেন্ড
+  `;
         } else {
-          document.getElementById("timer").innerHTML = "ইভেন্ট শুরু হয়েছে!";
+          // Stop the timer, show the heading, and start the live stream
+          clearInterval(timerInterval);
+          document.getElementById("countdown-section").classList.add("hidden");
+
+          const liveSection = document.getElementById("live-section");
+          liveSection.innerHTML = `
+  <h2 class="text-2xl font-semibold text-green-600 mb-4">ইভেন্ট শুরু হয়েছে!</h2>
+  <div class="video-container">
+  <iframe
+  class="rounded shadow-lg"
+  src="https://www.youtube.com/embed/rcHQC5_jybk?autoplay=1"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
+  </iframe>
+  </div>
+  `;
+
+          // Add this CSS for responsiveness
+          const styleTag = document.createElement("style");
+          styleTag.innerHTML = `
+  .video-container {
+  position: relative;
+  width: 100%; /* Full width of the parent container */
+  max-width: 700px; /* Limit the video size for larger screens */
+  aspect-ratio: 16 / 9; /* Automatically handles width and height ratio */
+  margin: 0 auto; /* Center the video horizontally */
+  }
+  
+  .video-container iframe {
+  width: 100%; /* Responsive width */
+  height: 100%; /* Responsive height based on aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for aesthetics */
+  }
+  `;
+          document.head.appendChild(styleTag);
+          liveSection.classList.remove("hidden");
+
+          // Automatically stop the live stream and show the message after 1 hour 40 minutes
+          setTimeout(() => {
+            liveSection.innerHTML = `
+  <div class="text-message">
+  <p class="text-2xl font-semibold text-red-500">ইভেন্ট শেষ হয়েছে!</p>
+  </div>
+  `;
+            const messageStyleTag = document.createElement("style");
+            messageStyleTag.innerHTML = `
+  .text-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0; /* Remove extra height */
+  padding: 1rem; /* Add some spacing */
+  }
+  `;
+            document.head.appendChild(messageStyleTag);
+          }, 4200000); // 1 hour 10 minutes in milliseconds
         }
       }
 
-      // Update the timer every second
-      setInterval(updateTimer, 1000);
+      // Start the countdown
+      const timerInterval = setInterval(updateTimer, 1000);
       updateTimer(); // Initial call
     </script>
   </body>
